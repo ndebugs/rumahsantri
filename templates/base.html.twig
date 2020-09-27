@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}{% endblock %}</title>
-        {% block styles %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block content %}{% endblock %}
-        {% block scripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </body>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}{% endblock %}
+		</title>
+
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('build/apple-touch-icon.png') }}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('build/favicon-32x32.png') }}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('build/favicon-16x16.png') }}">
+		<link rel="manifest" href="{{ asset('build/site.webmanifest') }}">
+
+		{% block styles %}
+			{{ encore_entry_link_tags('app') }}
+		{% endblock %}
+	</head>
+	<body>
+		{% block content %}{% endblock %}
+		{% block scripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+	</body>
 </html>
